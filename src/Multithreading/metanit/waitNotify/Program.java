@@ -21,7 +21,6 @@ class Store {
             try {
                 wait();
             } catch (InterruptedException e) {
-
             }
         }
         product--;
@@ -35,7 +34,6 @@ class Store {
             try {
                 wait();
             } catch (InterruptedException e) {
-
             }
         }
         product++;
