@@ -37,14 +37,16 @@ class Philosopher extends Thread {
                 food.minusFood(measureOfHunger);
                 System.out.println (name + " поел! Он выходит из-за стола");
                 System.out.println("Еды осталось - " + food.getFoodCount());
-                sem.release();
 
-                // философ ушел, освободив место другим
                 sleep(300);
             }
         }
         catch(InterruptedException e) {
             System.out.println ("Что-то пошло не так!");
+        }
+        finally {
+            // философ ушел, освободив место другим
+            sem.release();
         }
     }
 }

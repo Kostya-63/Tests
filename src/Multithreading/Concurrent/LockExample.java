@@ -17,10 +17,12 @@ public class LockExample {
     }
 }
 
+
 class CommonResource {
 
     int x = 0;
 }
+
 
 class CountThread implements Runnable {
 
@@ -48,5 +50,4 @@ class CountThread implements Runnable {
             locker.unlock(); // снимаем блокировку
         }
     }
-
 }
